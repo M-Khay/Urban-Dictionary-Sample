@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Urban Dictionary</string>
+    <string name="search">Search</string>
+    <string name="go">Go</string>
+    <string name="search_hint">Go search the world!</string>
+    <string name="definition_placeholder">Definition Placeholder</string>
+    <string name="author">author</string>
+    <string name="up_votes">up_votes</string>
+
+    <string name="down_votes">down_votes</string>
+    <string name="urban_dictionary">Urban Dictionary</string>
+    <string name="enter_text_search">Please enter word to search.</string>
+</resources>

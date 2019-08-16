@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/definition"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/definition_placeholder"
+        android:text=""
+        android:textIsSelectable="true"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/definition"
+        android:layout_alignParentStart="true"
+        android:hint="@string/author"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+    <android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:grid="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/votes_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/author"
+        android:layout_centerHorizontal="true"
+        grid:alignmentMode="alignBounds"
+        grid:columnCount="2"
+        grid:rowOrderPreserved="false"
+        grid:useDefaultMargins="true"
+        tools:context="MainActivity">
+
+        <android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:grid="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/votes_grid_internal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:layout_gravity="center_horizontal|center_vertical"
+            grid:alignmentMode="alignBounds"
+            grid:columnCount="2"
+            grid:rowOrderPreserved="false"
+            grid:useDefaultMargins="true"
+            tools:context="MainActivity">
+
+            <TextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/up"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_thumb_up"
+                android:drawableRight="@drawable/ic_thumb_up"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/up_votes"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                app:layout_gravity="center_horizontal"
+                grid:layout_columnWeight="1" />
+
+            <TextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/down"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_thumb_down"
+                android:drawableLeft="@drawable/ic_thumb_down"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/down_votes"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                app:layout_gravity="center_horizontal"
+                grid:layout_columnWeight="1" />
+
+        </android.support.v7.widget.GridLayout>
+
+        <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/share_def"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_share"
+            android:orientation="horizontal"
+            app:layout_gravity="right|center_vertical"
+            grid:layout_columnWeight="1" />
+
+    </android.support.v7.widget.GridLayout>
+</RelativeLayout>
